@@ -158,8 +158,26 @@ ul.nav a { zoom: 1; }
     <p><a href="screenshots_en.html">Screenshots</a></p>
     <p><a href="download_en.html">Downloads</a></p>
     <h1>News<span class="header"><a href="#"></a></span></h1>
-    <p>Jun-2018: VC++ Udf Studio homepage created.</p>
+    <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
+    <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Sep-2019: version 2019R2 Service Pace 1</p>
+    <blockquote>
+      <ul>
+        <li>Fixed the bug that Intellisense reports unable to find &quot;ud_io1.h&quot; when start debugging.</li>
+        <li>Fixed the bug that Visual Studio instance can't be closed when Fluent closes or VC++ Udf Studio menu is unloaded in debugging mode (In previous version, Visual Studio may freeze or lead to illegal operation).</li>
+        <li>Users needn't put #include &quot;udf.h&quot; in extern &quot;C&quot; and #include &quot;stdafx.h&quot;  at the beginning of UDF source file. That means the UDF source file syntax is exactly same as that of a traditional UDF.</li>
+        <li>Fixed the bug that some users can't load VC++ Udf Studio menu in VS2012/2013.</li>
+        <li>Fixed the bug that version auto turns back to 2d when ajusting processes in parallel version.</li>
+        <li>Fixed the bug that error occurs if a case is in drive root directory.</li>
+        <li>Enhanced the searching capability for VS and Fluent installation directories.</li>
+        <li>Syncronized working directory with that of the opening case all the time to facilitate opening and saving files.</li>
+        <li>If the user chooses to overwrite the source file, a backup file will be generated to allow recovery in future. </li>
+        <li>Debugging will be forbidden if the user starts debugging in Release mode or in debugging mode without pdb file.</li>
+        <li>Remove the warning        &quot;MBCS support in MFC is deprecated&quot; and &quot;function or variable may be unsafe&quot; (e.g. sprintf)  in VS2013.</li>
+        <li>Disable some unnecessary menu items and buttons in VS to avoid misoperation. </li>
+      </ul>
+    </blockquote>
     <p>Jun-2019: version 2019R2</p>
     <blockquote>
       <ul>

@@ -158,14 +158,32 @@ ul.nav a { zoom: 1; }
     <p><a href="screenshots_cn.html">屏幕截图</a></p>
     <p><a href="download_cn.html">下载试用</a></p>
     <h1>新闻<span class="header"><a href="#"></a></span></h1>
-    <p>2018年6月: 创建VC++ Udf Studio主页。</p>
+    <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
+    <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2019年9月:  2019R2 Service Pack 1 版本</p>
+    <blockquote>
+      <ul>
+        <li>修正调试时Intellisense找不到ud_io1.h的错误</li>
+        <li>Debug模式下关闭Fluent或卸载VC++ Udf Studio菜单时，无法自动关闭对应Visual Studio实例的bug（旧版本中可能卡死或非法操作）</li>
+        <li>源码中无须再将#include &quot;udf.h&quot;放在extern &quot;C&quot;中，同时无须在开头添加#include &quot;stdafx.h&quot;，UDF代码完全和常规udf代码相同</li>
+        <li>修正VS2012, 2013下有的用户无法加载VC++ Udf Studio菜单的bug</li>
+        <li>修正并行版本中调整核心数目时版本自动跳回到2d的bug</li>
+        <li>修正case放在磁盘根目录时产生错误警告的bug</li>
+        <li>增强自动查找VS和Fluent安装目录的能力</li>
+        <li>使工作目录与打开case的目录随时同步，方便用户打开或保存文件</li>
+        <li>如果用户选择覆盖源代码，则添加备份文件，防止用户覆盖后反悔而需要恢复</li>
+        <li>debug模式下pdb文件丢失或Release模式中若用户执行调试命令则显示警告，禁止调试</li>
+        <li>VS2013中去掉编译时&quot;MBCS support in MFC is deprecated&quot;和&quot;function or variable may be unsafe&quot;的警告</li>
+        <li>将某些VS自带的不应使用的菜单项和按钮变灰，尽可能防止误操作。</li>
+      </ul>
+    </blockquote>
     <p>2019年6月:  2019R2版本</p>
     <blockquote>
       <ul>
         <li>支持到Fluent6.3 ~ Fluent 2019R2</li>
         <li>移除FLUENT启动时以红字显示&quot;Error: sopenoutputfile: unable to open file for output&quot; 的错误。</li>
-        </ul>
+      </ul>
     </blockquote>
     <p>2019年5月:  19.2 版本</p>
     <ul>
@@ -176,7 +194,7 @@ ul.nav a { zoom: 1; }
         </ul>
       </ul>
     </ul>
-    <p>2018年9月:  18.2 Service Pack1 版本</p>
+    <p>2018年9月:  18.2 Service Pack 1 版本</p>
     <ul>
       <ul>
          <ul>
