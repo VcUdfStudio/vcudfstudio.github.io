@@ -118,6 +118,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	font-size: 1px;
 	line-height: 0px;
 }
+.STYLE1 {font-family: Verdana, Arial, Helvetica, sans-serif}
 -->
 </style><!--[if lte IE 7]>
 <style>
@@ -158,6 +159,16 @@ ul.nav a { zoom: 1; }
     <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
     <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Nov-2019: version 2019R3</p>
+    <blockquote>
+      <ul>
+        <li>Fixed the bug that UDF library can't be loaded/unloaded when some editboxs (such as gravity setup editbox) are open before starting Visual Studio in Fluent 12.0~16.2.</li>
+        <li>Fixed the bug that &quot;node&quot; library compilation fails in parallel version if the Fluent case folder contains &quot;=&quot; symbol.</li>
+        <li>Version code 19.3, 19.4, 19.5 are replaced by 2019R1, 2019R2, 2019R3 in &quot;launcher&quot; combobox.</li>
+        <li>Fixed the bug that “Please read case first” still occurs when starting Visual Studio after importing non-Fluent mesh formats.</li>
+        <li>The udf &quot;source&quot; folder and UDF library &quot;libudf&quot; directory can't be auto updated if the current Fluent case is saved in other directory. But this is only available in Fluent v<span class="STYLE1">ersion later than 19</span>.0. For verison&lt;19.0, it is a known bug (So please do not save the case to other directory anymore after the Fluent case is read if your Fluent verison is below 19.0).</li>
+        </ul>
+    </blockquote>
     <p>Sep-2019: version 2019R2 Service Pace 1</p>
     <blockquote>
       <ul>

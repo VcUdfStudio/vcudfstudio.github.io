@@ -118,6 +118,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	font-size: 1px;
 	line-height: 0px;
 }
+.STYLE1 {font-family: Verdana, Arial, Helvetica, sans-serif}
 -->
 </style><!--[if lte IE 7]>
 <style>
@@ -158,6 +159,16 @@ ul.nav a { zoom: 1; }
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2019年11月:  2019R3版本</p>
+    <blockquote>
+      <ul>
+        <li>修正Fluent 12.0~16.2中，如果启动Visual Studio之前某些编辑框如重力设置编辑框处于打开状态，UDF库无法加载或卸载的bug</li>
+        <li>修正并行版本中，如果Fluent case文件夹含“=”符号时node库无法编译成功的bug</li>
+        <li>启动器下拉框中的19.3，19.4，19.5版本号分别更改为等价的2019R1, 2019R2, 2019R3</li>
+        <li>修改导入非Fluent网格格式后启动Visual Studio仍出现”请先读取case“的提示</li>
+        <li>如果当前Fluent case另存到其它目录时，UDF源码文件夹”source“和库目录”libudf“位置会自动相应更新，但这只针对Fluent版本19.0以后版本。对于19.0以前的版本尚无法自动更新，属于已知bug（因此，对于19.0以前的Fluent版本，一旦读取一个Fluent case请不要再另存到其它位置）。</li>
+        </ul>
+    </blockquote>
     <p>2019年9月:  2019R2 Service Pack 1 版本</p>
     <blockquote>
       <ul>
