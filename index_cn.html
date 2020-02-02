@@ -159,6 +159,24 @@ ul.nav a { zoom: 1; }
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2020年2月:  2020R1版本</p>
+    <blockquote>
+      <ul>
+        <li>支持到Fluent6.3 ~ Fluent 2020R1</li>
+        <li>存在udf_source.cpp源码文件时时直接打开，不再询问是否覆盖，不存在时则自动建立示例源码文件</li>
+        <li>修正win10下先退出Fluent的时候VS会卡死的bug（现在如果fluent关闭则直接关闭对应VS，不出现提示对话框）</li>
+        <li>VS打开情况下最大化Fluent窗口再读取另一个新case时，VS中弹出的确认保存源码对话框被fluent窗口遮挡，导致见不到弹出警告对话框，用户误以为卡死，现已经修正此bug，保存源码对话框会显示在最前端。</li>
+        <li>修正“win10下, VS中如果有模态对话框打开状态下（比如选项等），此时关闭fluent或读写新case或TUI命令卸载插件菜单，对应VS卡死”的bug</li>
+        <li> 修正使用UDF_EXPORT关键字引起fluent libudf库内函数时候无法找到函数指针的bug，例如真实气体模型Real Gas Model中使用到UDF_EXPORT，开启真实气体模型时报告couldn't get real_gas_fcns</li>
+        <li>Fluent18.0以及更高版本fluent中遗漏WIN64定义，因而可能产生的bug</li>
+        <li>修正udf.h中遗漏version.h头文件的bug，该bug会导致UDF源码中无法调用Inquire_Fluent_Build_Time，Inquire_Release等函数</li>
+        <li>修正启动器启动fluent时因没有license导致fluent闪退无任何提示的bug</li>
+        <li>修正“偶尔有时启动fluent嵌入菜单显示出不来”的bug</li>
+        <li>完善功能，导入第三方格式的网格或另存为*.cas，*.cas.gz，*.cas.h5都能自动识别新导入或存储的目录，与VS当前针对的cas目录不同时自动关闭VS</li>
+        <li>Fluent工作目录随时与打开/存储/导入的cas目录同步</li>
+        <li>修正“关闭串行版Fluent12.1~14.5时无法自动关闭对应的Visual Studio”的bug。</li>
+      </ul>
+    </blockquote>
     <p>2019年11月:  2019R3版本</p>
     <blockquote>
       <ul>

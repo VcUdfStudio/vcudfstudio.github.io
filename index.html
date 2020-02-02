@@ -159,6 +159,24 @@ ul.nav a { zoom: 1; }
     <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
     <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Feb-2020: version 2020R1</p>
+    <blockquote>
+      <ul>
+        <li>Support Fluent6.3 ~ Fluent 2020R1.</li>
+        <li>&quot;udf_source.cpp&quot; will be opened directly when it exists. No longer ask users to overwrite or not. If it doesn't exist, a demo UDF source file will be created.</li>
+        <li>Fixed the bug that VS will freeze when Fluent closes on Win10 (Now if Fluent closes, VS will be closed directly without any prompt).</li>
+        <li>When reading a new case with Fluent window maximized, VS saving file dialog will be overlayed by Fluent window, which may lead users to misunderstand that VS is freezing. Now this bug is fixed, the saving dialog in VS will be shown at the foreground.</li>
+        <li>Fixed the bug &quot;If VS has modal dialog such as 'option' dialog in open on Win10, VS will freeze when closing Fluent or reading/writing case or unloading VC++ UDF Studio addon menu&quot;.</li>
+        <li>Fix the bug &quot;Can't find function pointer in Fluent libudf library due to using UDF_EXPORT keyword&quot;. For example, if using UDF_EXPORT in Real Gas Model source code, &quot;couldn't get real_gas_fcns&quot; will be reported when hooking Real Gas Model macros.</li>
+        <li>Added the &quot;WIN64&quot; definition in Fluent18.0 and higher versions, and resultant  bugs.</li>
+        <li>Fixed the bug &quot;version.h header file not included in udf.h&quot;. This bug will prevent the UDF source to call important functions, such as Inquire_Fluent_Build_Time, Inquire_Release.</li>
+        <li>Fixed the bug that Fluent flash-offs without any prompt due to license absense.</li>
+        <li>Fixed the bug that Fluent add-on menu can't show occasionally.</li>
+        <li>Enhanced the capability that new reading/saving/importing case (*.cas, *.cas.gz, *.cas.h5) can be auto detected. If the new case directory is different from that in VS, VS will be closed automatically.</li>
+        <li>Fluent working directory is always synchronized with the new open/saving/importing case directory.</li>
+        <li>Fix the bug that Visual Studio can't be auto closed when Fluent window closes in Fluent version 12.1~14.5.</li>
+      </ul>
+      </blockquote>
     <p>Nov-2019: version 2019R3</p>
     <blockquote>
       <ul>
