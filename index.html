@@ -151,14 +151,24 @@ ul.nav a { zoom: 1; }
   <div class="content">
     <h1>What's it?</h1>
     <h4>Language <a href="index_cn.html"><img src="images/China-flag-small.jpg" title="Chinese" width="48" height="34" /></a> <a href="index.html"><img src="images/English-flag-small.jpg" title="English" width="48" height="34" /></a></h4>
-    <p> VC++ UDF Studio is a professional tool  that takes advantage of Visual Studio IDE, C++ compiler, and debugger to edit, compile, load, unload and debug FLUENT UDF source in a simple way (all-in-one). It controls FLUENT, Visual Studio in the form of add-on menu/toolbar and makes them cooperate like a unified software. Furthermore, C++ language and Win32 API/MFC functions can be identified in this tool, which greatly enhances the capability of UDF.</p>
+    <p> VC++ UDF Studio is a professional tool  that takes advantage of Visual Studio IDE, C++ compiler, and debugger to edit, compile, load, unload and debug FLUENT UDF source in a simple way (all-in-one). It controls FLUENT, Visual Studio in the form of add-on menu/toolbar and makes them cooperate like a unified software. Furthermore, C++ language and Win32 API/MFC functions can be identified in this tool, which greatly enhances the capability of UDF. For example, you can couple Fluent with matlab using this tool by calling Windows socket (<a href="http://blog.sina.com.cn/s/blog_14d64daa10102zf7k.html">blog demo</a>)</p>
     <p>From now on, debugging UDF code will be just as easy as common C/C++ in Visual Studio. <strong>Source code can be traced line by line and intermmediate variable values can be inspected where mouse hovered</strong>. Just try it!</p>
     <p><a href="screenshots_en.html">Screenshots</a></p>
     <p><a href="download_en.html">Downloads</a></p>
     <h1>News<span class="header"><a href="#"></a></span></h1>
+    <p>May-2020: VIP Tencent QQ group created for academic version (group number: 288943652, only for registered users of academic version).</p>
     <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
     <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Aug-2020: version 2020R2</p>
+    <blockquote>
+      <ul>
+        <li>Support Fluent6.3 ~ Fluent 2020R2.</li>
+        <li>Fixed the bug that memory occupied by VC++UdfStudio  is not freed when the user unloads &quot;VC++UdfStudio&quot; menu from Fluent manually for Fluent17.0 and higher version.</li>
+        <li>Fixed the bug that HardWare ID section may be empty in the user information file &quot;user.ini&quot;.</li>
+        <li>Not show the C4190 warning any more (like 'XXX' has C-linkage specified, but returns UDT 'XXX' which is incompatible with C) because of including &quot;sg.h&quot; or &quot;geom_info.h&quot; header.</li>
+      </ul>
+    </blockquote>
     <p>Jul-2020: version 2020R1 SP1</p>
     <blockquote>
       <ul>
@@ -253,7 +263,7 @@ ul.nav a { zoom: 1; }
     <h1>Supported Systems<span class="header"><a href="#"></a></span></h1>
     <p><strong>Windows: </strong>WinXP ~ Win10 (32bit &amp; 64bit)</p>
     <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013</p>
-    <p><strong>Fluent:</strong> FLUENT6.3 ~ FLUENT2020R1</p>
+    <p><strong>Fluent:</strong> FLUENT6.3 ~ FLUENT2020R2</p>
     <h1>Features<span class="header"><a href="#"></a></span></h1>
     <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
       <tr>

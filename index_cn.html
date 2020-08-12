@@ -151,14 +151,24 @@ ul.nav a { zoom: 1; }
   <div class="content">
     <h1>这是什么软件？</h1>
     <h4>语言 <a href="index_cn.html"><img src="images/China-flag-small.jpg" title="中文" width="48" height="34" /></a> <a href="index.html"><img src="images/English-flag-small.jpg" title="英文" width="48" height="34" /></a></h4>
-    <p> VC++ UDF Studio 是利用Visual Studio集成环境，C++编译器和调试器的技术优势，能在Visual Studio中一体化编辑、编译、加载、卸载和调试FLUENT UDF源码。它通过嵌入菜单或工具栏的形式控制FLUENT和Visual Studio， 协调两者宛如一个软件一样工作。此外， 本工具还可以拓展辨认C++语言和Win32 API/MFC函数，使UDF功能更加强大。</p>
+    <p> VC++ UDF Studio 是利用Visual Studio集成环境，C++编译器和调试器的技术优势，能在Visual Studio中一体化编辑、编译、加载、卸载和调试FLUENT UDF源码。它通过嵌入菜单或工具栏的形式控制FLUENT和Visual Studio， 协调两者宛如一个软件一样工作。此外， 本工具还可以拓展辨认C++语言和Win32 API/MFC函数，使UDF功能更加强大。例如，您可借助本工具调用Windows socket以实现Fluent和matlab的耦合（<a href="http://blog.sina.com.cn/s/blog_14d64daa10102zf7k.html">博客实例</a>）。</p>
     <p>从现在起，调试UDF将像调试常规C/C++程序一样容易，可以<strong>单步跟踪程序，直接观察鼠标停留处中间变量的值</strong>。还不快来试试？ </p>
     <p><a href="screenshots_cn.html">屏幕截图</a></p>
     <p><a href="download_cn.html">下载试用</a></p>
     <h1>新闻<span class="header"><a href="#"></a></span></h1>
+    <p>2020年5月: 创建学术版VIP腾讯QQ群（群号：288943652，仅限学术版注册用户）</p>
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2020年8月:  2020R2</p>
+    <blockquote>
+      <ul>
+        <li>支持到Fluent6.3 ~ Fluent 2020R2</li>
+        <li>对于Fluent17.0或更高版本，如果用户在Fluent中手动卸载VC++UdfStudio菜单，旧版本无法释放插件占用内存的bug，本版本予以修正</li>
+        <li>修正用户信息文件&quot;user.ini&quot;中HardWare ID字段可能为空白的bug</li>
+        <li>不再显示由于加入&quot;sg.h&quot; 或 &quot;geom_info.h&quot;头文件后产生的C4190警告（类似 'XXX' has C-linkage specified, but returns UDT 'XXX' which is incompatible with C）</li>
+      </ul>
+    </blockquote>
     <p>2020年7月:  2020R1 SP1</p>
     <blockquote>
       <ul>
@@ -257,7 +267,7 @@ ul.nav a { zoom: 1; }
     <h1>支持的系统<span class="header"><a href="#"></a></span></h1>
     <p><strong>Windows: </strong>WinXP ~ Win10 (32bit &amp; 64bit)</p>
     <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013</p>
-    <p><strong>Fluent:</strong> Fluent6.3 ~ Fluent2020R1</p>
+    <p><strong>Fluent:</strong> Fluent6.3 ~ Fluent2020R2</p>
     <h1>特征<span class="header"><a href="#"></a></span></h1>
     <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
       <tr>
