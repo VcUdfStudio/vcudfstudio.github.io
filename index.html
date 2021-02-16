@@ -160,6 +160,19 @@ ul.nav a { zoom: 1; }
     <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
     <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Feb-2021: version 2021R1</p>
+    <blockquote>
+      <ul>
+        <li>Support Fluent6.3 ~ Fluent 2021R1.</li>
+        <li>Added &quot;double precision&quot; checkbox to replace 2ddp, 3ddp</li>
+        <li>Added SuperUdfExtension extension library (get zone ID from name, drive Fluent to iterate by UDF, perform Fluent TUI/sheme command by UDF, insert user menu in Fluent, etc.. Some of these functions are only provided in enterprise version)</li>
+        <li>Enabled to set 3rd-party header and lib file directories (enterprise version only)</li>
+        <li>Fixed the bug that Intellisense report “ud_io1.h” cannot be found.</li>
+        <li>Fixed the bug that register  information cannot be deleted when uninstalling on 32bit windows.</li>
+        <li>Detect whether the UDF library is occupied by other processes. If yes, the program can kill these processes before compiling.</li>
+        <li>In old parallel version, only host UDF library was detected whether it has been loaded in Fluent. Now host and node library are both detected. If either one has been loaded, the compilation will stopped.</li>
+      </ul>
+    </blockquote>
     <p>Aug-2020: version 2020R2</p>
     <blockquote>
       <ul>
@@ -261,40 +274,111 @@ ul.nav a { zoom: 1; }
     <p>February-2018: version 1.0 SP1 (only in China)</p>
     <p>November-2017: version 1.0 beta (only in China)</p>
     <h1>Supported Systems<span class="header"><a href="#"></a></span></h1>
-    <p><strong>Windows: </strong>WinXP ~ Win10 (32bit &amp; 64bit)</p>
-    <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013</p>
-    <p><strong>Fluent:</strong> FLUENT6.3 ~ FLUENT2020R2</p>
+    <p><strong>Windows: </strong>WinXP ~ Win10 (32bit &amp; 64bit) Professional or Enterprise</p>
+    <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013 Professional or Ultimate</p>
+    <p><strong>Fluent:</strong> FLUENT6.3 ~ FLUENT2021R1</p>
     <h1>Features<span class="header"><a href="#"></a></span></h1>
-    <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td width="38%"><p align="center">Fluent Architecture</p></td>
-        <td width="31%"><p align="center">Trial Version</p></td>
-        <td width="31%"><p align="center">Registered Version</p></td>
-      </tr>
-      <tr>
-        <td width="38%"><p align="center">Serial(2d, 3d)</p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" width="27" height="27" /> max.    2 udf macros</p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" /> unlimited udf macros</p></td>
-      </tr>
-      <tr>
-        <td width="38%" height="27"><p align="center">Serial(2ddp, 3ddp)</p></td>
-        <td width="31%"><p align="center"><img src="images/error.png" width="27" height="27" /></p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
-      </tr>
-      <tr>
-        <td width="38%" height="27"><p align="center">Parallel(2d, 2ddp, 3d, 3ddp)</p></td>
-        <td width="31%"><p align="center"><img src="images/error.png" alt="" width="27" height="27" /></p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
-      </tr>
-    </table>
+    <table width="97%" border="1" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="314" rowspan="2"><p align="center">Capabilities</p></td>
+    <td colspan="2"><p align="center">Academic version</p></td>
+    <td colspan="2"><p align="center">Enterprise version</p></td>
+  </tr>
+  <tr>
+    <td width="165"><div align="center">Trial</div></td>
+    <td><p align="center">Registered</p></td>
+    <td><p align="center">Trial</p></td>
+    <td><p align="center">Registered</p></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Compile    and debug<br />
+      (serial,    single precision)</p></td>
+    <td width="165"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />max. 2 macros</div></td>
+    <td width="175"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />unlimited macros</p></td>
+    <td width="189"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />max. 2 macros</div></td>
+    <td width="182"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />unlimited macros</p></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Compile and debug<br />
+      (serial, double    precision)</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Compile and debug<br />
+      (parallel, single/double    precision)</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Call C++/Win32    API/MFC functions</p></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Get boundary id from    name</p></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Call 3rd-party    library</p></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Set 3rd-party    library folders</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />max. 1 folder</div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />unlimited folders</div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Add user menu in    Fluent</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />max. 2 submenus</div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />unlimited submenus</div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Drive Fluent to    iterate by UDF</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Call Scheme/TUI in    UDF</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+  </tr>
+  <tr>
+    <td width="314"><p align="center">Couple iteration    with Matlab</p></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+    <td><div align="center">In  develop.</div></td>
+    <td><div align="center">In  develop.</div></td>
+  </tr>
+</table>
 <p>&nbsp;</p>
-    <h1>Tips<span class="header"><a href="#"></a></span></h1>
+<h1>Tips<span class="header"><a href="#"></a></span></h1>
     <p>&ldquo;Visual  assistant&rdquo; (<a href="http://www.wholetomato.com/">www. wholetomato.com</a>) is highly  recommended to install, which has a lot of extended functions, such as code  completion (useful for UDF macro), braces matching, user-defined keyword colors.</p>
-    <p><img src="images/visualassist.jpg" width="80%" height="50%" /></p>
+    <p><img src="images/visualassist.jpg" width="65%" height="87%" /></p>
     <p>&nbsp;</p>
   </div>
   <div class="footer">
-    <p>Super UDF Studio, 2020. Contact <a href="mailto:vcUdfStudio@outlook.com">vcUdfStudio@outlook.com</a> (International) or <a href="mailto:vcUdfStudio@sohu.com">vcUdfStudio@sohu.com</a> (China) for feedback or register. Technical support in Tecent QQ group: 817525240.</p>
+    <p>Super UDF Studio, 2021. Contact <a href="mailto:vcUdfStudio@outlook.com">vcUdfStudio@outlook.com</a> (International) or <a href="mailto:vcUdfStudio@sohu.com">vcUdfStudio@sohu.com</a> (China) for feedback or register. Technical support in Tecent QQ group: 817525240.</p>
   <!-- end .footer --></div>
 <!-- end .container --></div>
 </body>

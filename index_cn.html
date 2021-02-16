@@ -118,7 +118,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	font-size: 1px;
 	line-height: 0px;
 }
-.STYLE1 {font-family: Verdana, Arial, Helvetica, sans-serif}
 -->
 </style><!--[if lte IE 7]>
 <style>
@@ -160,6 +159,19 @@ ul.nav a { zoom: 1; }
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2021年2月:  2021R1</p>
+    <blockquote>
+      <ul>
+        <li>支持到Fluent6.3 ~ Fluent 2021R1</li>
+        <li>加入双精度勾选框，代替2ddp，3ddp</li>
+        <li>增加SuperUdfExtension拓展函数库（根据zone 名字获取对应ID，UDF中驱动fluent迭代，UDF中驱动fluent执行TUI/scheme命令，Fluent中添加用户菜单等，其中某些功能仅企业版提供）</li>
+        <li>添加第三方库头文件和库文件目录设置（仅企业版）</li>
+        <li>修正Intellisense报告无法打开源文件“ud_io1.h”的bug</li>
+        <li>32 位windows下卸载本软件后注册信息残留的bug</li>
+        <li>编译前检测其它进程是否占用当前UDF库，当被占用时可强制杀死占用UDF库的进程。</li>
+        <li>并行编译前旧版本只检测host库是否加载的bug，现在对host和node库均进行检测。如果已经加载则报错，停止编译。</li>
+      </ul>
+    </blockquote>
     <p>2020年8月:  2020R2</p>
     <blockquote>
       <ul>
@@ -265,40 +277,108 @@ ul.nav a { zoom: 1; }
     <p>2018年2月: 1.0 SP1版本 (仅中国国内)</p>
     <p>2017年11月: 1.0 beta版本 (仅中国国内)</p>
     <h1>支持的系统<span class="header"><a href="#"></a></span></h1>
-    <p><strong>Windows: </strong>WinXP ~ Win10 (32bit &amp; 64bit)</p>
-    <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013</p>
-    <p><strong>Fluent:</strong> Fluent6.3 ~ Fluent2020R2</p>
+    <p><strong>Windows: </strong>WinXP ~ Win10 (32bit &amp; 64bit)专业或企业版</p>
+    <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013专业或旗舰版</p>
+    <p><strong>Fluent:</strong> Fluent6.3 ~ Fluent2021R1</p>
     <h1>特征<span class="header"><a href="#"></a></span></h1>
     <table width="96%" border="1" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="38%"><p align="center">Fluent架构</p></td>
-        <td width="31%"><p align="center">试用版</p></td>
-        <td width="31%"><p align="center">注册版</p></td>
+        <td width="24%" rowspan="2"><p align="center">功能</p>          </td>
+        <td colspan="2"><p align="center">学术版</p></td>
+        <td colspan="2"><p align="center">企业版</p></td>
       </tr>
       <tr>
-        <td width="38%"><p align="center">串行(2d, 3d)</p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" width="27" height="27" />最多2个udf宏</p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" /> 不限udf宏数</p></td>
+        <td width="18%"><div align="center">试用版</div></td>
+        <td><p align="center">注册版</p></td>
+        <td><p align="center">试用版</p></td>
+        <td><p align="center">注册版</p></td>
       </tr>
       <tr>
-        <td width="38%" height="27"><p align="center">串行(2ddp, 3ddp)</p></td>
-        <td width="31%"><p align="center"><img src="images/error.png" width="27" height="27" /></p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+        <td width="24%" height="27"><p align="center">编译调试（串行，单精度） </p></td>
+        <td width="18%"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个宏</div></td>
+        <td width="19%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />宏数不限</p></td>
+        <td width="19%"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个宏</div></td>
+        <td width="20%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />宏数不限</p></td>
       </tr>
       <tr>
-        <td width="38%" height="27"><p align="center">并行(2d, 2ddp, 3d, 3ddp)</p></td>
-        <td width="31%"><p align="center"><img src="images/error.png" alt="" width="27" height="27" /></p></td>
-        <td width="31%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+        <td height="27"><p align="center">编译调试（串行，双精度） </p></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">编译调试（并行，单/双精度）</div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">调用C++/Win32    API/MFC函数 </div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">根据zone名字获取id号 </div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">调用第三方LIB库</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">设置第三方函数库目录 </div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多1个目录</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />目录数不限</div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">Fluent中加入用户菜单 </div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个子菜单</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />子菜单数目不限</div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">UDF中驱动fluent迭代 </div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">UDF中调用Scheme/TUI命令 </div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+      </tr>
+      <tr>
+        <td height="29"><div align="center">与Matlab耦合迭代计算 </div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center">开发中</div></td>
+        <td><div align="center">开发中</div></td>
       </tr>
     </table>
 <p>&nbsp;</p>
-    <h1>贴士<span class="header"><a href="#"></a></span></h1>
+<h1>贴士<span class="header"><a href="#"></a></span></h1>
     <p>强烈推荐安装&ldquo;Visual assistant&rdquo; (<a href="http://www.wholetomato.com/">www. wholetomato.com</a>) 插件。该插件具有很多扩展功能，例如代码自动补全（对udf宏提示很有用），括号匹配，用户自定义关键词颜色等等。</p>
-    <p><img src="images/visualassist.jpg" width="80%" height="50%" /></p>
+    <p><img src="images/visualassist.jpg" width="65%" height="87%" /></p>
     <p>&nbsp;</p>
   </div>
   <div class="footer">
-    <p>Super UDF工作室，2020。 咨询、反馈意见或注册请联系 <a href="mailto:vcUdfStudio@sohu.com">vcUdfStudio@sohu.com</a> (中国邮箱) or <a href="mailto:vcUdfStudio@outlook.com">vcUdfStudio@outlook.com</a> (非中国邮箱)。技术支持QQ群：817525240。</p>
+    <p>Super UDF工作室，2021。 咨询、反馈意见或注册请联系 <a href="mailto:vcUdfStudio@sohu.com">vcUdfStudio@sohu.com</a> (中国邮箱) or <a href="mailto:vcUdfStudio@outlook.com">vcUdfStudio@outlook.com</a> (非中国邮箱)。技术支持QQ群：817525240。</p>
   <!-- end .footer --></div>
 <!-- end .container --></div>
 </body>
