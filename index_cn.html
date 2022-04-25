@@ -163,6 +163,17 @@ ul.nav a { zoom: 1; }
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2022年4月:  2022R1 SP3</p>
+    <blockquote>
+      <ul>
+        <li>自带示例源码里遗漏了 //#pragma comment(lib, &quot;SuperUdfExtension.lib&quot;) 的问题</li>
+        <li>SuperUdf扩展库里增加中断迭代的函数SuperUdf_Interrupt</li>
+        <li>没有任何DEFINE宏时编译会报告无法打开输入文件“preprocessing.lib”的bug，现在该情况下增加警告停止编译</li>
+        <li>目录含有  '=,&amp;;符号的时候，Visual Studio工具栏按钮始终变灰无法使用或者编译时报告无法打开输入文件“preprocessing.lib”的bug</li>
+        <li>如果勾选matlab，则自动检测matlab coder是否已经安装，没安装的话给出警告</li>
+        <li>写过UDF源码的Case目录现在能够自动保存作为下次打开fluent选择case时的起始目录</li>
+      </ul>
+    </blockquote>
     <p>2022年4月:  2022R1 SP2</p>
     <blockquote>
       <ul>
@@ -386,10 +397,17 @@ ul.nav a { zoom: 1; }
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
       </tr>
       <tr>
-        <td height="27"><div align="center">根据zone名字获取id号 </div></td>
+        <td height="27"><div align="center">UDF中根据区域名字获取id号 </div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+      </tr>
+      <tr>
+        <td height="27"><div align="center">UDF语句中断迭代</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />仅限串行单精度</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />仅限串行单精度</div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
       </tr>
       <tr>
@@ -397,7 +415,8 @@ ul.nav a { zoom: 1; }
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
-        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /><br />
+        </div></td>
       </tr>
       <tr>
         <td height="27"><div align="center">设置第三方函数库目录 </div></td>
