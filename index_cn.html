@@ -153,7 +153,7 @@ ul.nav a { zoom: 1; }
   <div class="content">
     <h1>这是什么软件？</h1>
     <h4>语言 <a href="index_cn.html"><img src="images/China-flag-small.jpg" title="中文" width="48" height="34" /></a> <a href="index.html"><img src="images/English-flag-small.jpg" title="英文" width="48" height="34" /></a></h4>
-    <p> VC++ UDF Studio 是利用Visual Studio集成环境，C++编译器和调试器的技术优势，能在Visual Studio中一体化编辑、编译、加载、卸载和调试FLUENT UDF源码。它通过嵌入菜单或工具栏的形式控制FLUENT和Visual Studio， 协调两者宛如一个软件一样工作。此外， 本工具还可以拓展辨认C++语言和Win32 API/MFC函数，使UDF功能更加强大。例如，您可借助本工具调用Fortran静态库以实现对Fortran语言的支持，也可以调用Windows socket以实现Fluent和matlab的耦合（<a href="http://blog.sina.com.cn/s/blog_14d64daa10102zf7k.html">博客实例</a>）。</p>
+    <p> VC++ UDF Studio 是利用Visual Studio集成环境，C++编译器和调试器的技术优势，能在Visual Studio中一体化编辑、编译、加载、卸载和调试FLUENT UDF源码。它通过嵌入菜单或工具栏的形式控制FLUENT和Visual Studio， 协调两者宛如一个软件一样工作。此外， 本工具还可以拓展辨认C++语言和Win32 API/MFC函数，使UDF功能更加强大。例如，您可借助本工具调用第三方C/C++库，Fortran静态库以实现对Fortran语言的支持，也可以调用Windows socket以实现Fluent和matlab的耦合（<a href="http://blog.sina.com.cn/s/blog_14d64daa10102zf7k.html">博客实例</a>）。</p>
     <p>从现在起，调试UDF将像调试常规C/C++程序一样容易，可以<strong>单步跟踪程序，直接观察鼠标停留处中间变量的值</strong>。还不快来试试？ </p>
     <p><a href="screenshots_cn.html">屏幕截图</a></p>
     <p><a href="download_cn.html">下载试用</a></p>
@@ -163,6 +163,19 @@ ul.nav a { zoom: 1; }
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2022年5月:  2022R1 SP4</p>
+    <blockquote>
+      <ul>
+        <li>内嵌调用CoolProp物性库的可选功能</li>
+        <li>增加自动检查更新的功能，如果发现新版本则提醒用户（用户可以选择不再提醒）</li>
+        <li>支持由workbench启动</li>
+        <li>并行调试中可以指定需要debug的host/node进程，其它进程即使下了断点也不会中断</li>
+        <li>增加源代码语法识别能力，例如#include头文件如果漏了后半个引号时候，以前会无法识别，直接报告“UDF源码至少需要添加一个DEFINE_XXX宏”，现在已经修正</li>
+        <li>如果勾选了调用Matlab支持，在m文件没转为C++之前如果试图编译，则增加错误提示</li>
+        <li>如检测到未安装Visual Assistant，则给出提示，建议用户安装（用户可以选择不再提示）</li>
+        <li>将SuperUdfExtension.lib库引用内置在工程项目中，无需源码中再加#pragma comment(lib, &quot;SuperUdfExtension.lib&quot;)</li>
+      </ul>
+    </blockquote>
     <p>2022年4月:  2022R1 SP3</p>
     <blockquote>
       <ul>
@@ -447,6 +460,13 @@ ul.nav a { zoom: 1; }
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" /></div></td>
       </tr>
       <tr>
+        <td height="29"><div align="center">调用CoolProp函数</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多1个函数</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />不限</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多1个函数</div></td>
+        <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />不限</div></td>
+      </tr>
+      <tr>
         <td height="29"><div align="center">调用Fortran子过程</div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多1个子过程</div></td>
         <td><div align="center"><img src="images/right.png" alt="" width="27" height="27" />不限子过程数目</div></td>
@@ -473,7 +493,7 @@ ul.nav a { zoom: 1; }
 <p>&nbsp;</p>
 <h1>贴士<span class="header"><a href="#"></a></span></h1>
     <p>强烈推荐安装&ldquo;Visual assistant&rdquo; (<a href="http://www.wholetomato.com/">www. wholetomato.com</a>) 插件。该插件具有很多扩展功能，例如代码自动补全（对udf宏提示很有用），括号匹配，用户自定义关键词颜色等等。</p>
-    <p><img src="images/visualassist.jpg" width="65%" height="87%" /></p>
+    <p><img src="images/visualassist.jpg" width="59%" height="87%" /></p>
     <p>&nbsp;</p>
   </div>
   <div class="footer">
