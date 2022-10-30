@@ -165,8 +165,8 @@ ul.nav a { zoom: 1; }
     <p><a href="download_cn.html">下载试用</a></p>
     <h1>支持的平台<span class="header"><a href="#"></a></span></h1>
     <p><strong>Windows: </strong>WinXP ~ Win11 (32bit &amp; 64bit)专业或企业版</p>
-    <p><strong>Visual Studio:</strong> VS2008SP1 ~ VS2013专业或旗舰版（中文或英文版）</p>
-    <p><strong>Fluent:</strong> 6.3 ~ 2022R1</p>
+    <p><strong>Visual Studio:</strong> VS2010 ~ VS2019社区，专业或旗舰版（中文或英文版）</p>
+    <p><strong>Fluent:</strong> 6.3 ~ 2022R2</p>
     <p><strong>Intel Visual Fortran</strong>: 2011 ~ 2018 (12.0~18.0)</p>
     <p><strong>Matlab</strong>: 2014a~2021b</p>
     <h1>特征<span class="header"><a href="#"></a></span></h1>
@@ -177,17 +177,19 @@ ul.nav a { zoom: 1; }
         <td colspan="2"><p align="center">企业版</p></td>
       </tr>
       <tr>
-        <td width="18%"><div align="center">试用版</div></td>
+        <td width="21%"><div align="center">试用版</div></td>
         <td><p align="center">注册版</p></td>
         <td><p align="center">试用版</p></td>
         <td><p align="center">注册版</p></td>
       </tr>
       <tr>
         <td width="24%" height="27"><p align="center">编译调试（串行，单精度） </p></td>
-        <td width="18%"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个宏</div></td>
-        <td width="19%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />宏数不限</p></td>
-        <td width="19%"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个宏</div></td>
-        <td width="20%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />宏数不限</p></td>
+        <td width="21%"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个宏<br />
+        Fluent2022R2 无串行试用</div></td>
+        <td width="16%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />宏数不限</p></td>
+        <td width="22%"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />最多2个宏<br />
+        Fluent2022R2 无串行试用</div></td>
+        <td width="17%"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />宏数不限</p></td>
       </tr>
       <tr>
         <td height="27"><p align="center">编译调试（串行，双精度） </p></td>
@@ -198,9 +200,11 @@ ul.nav a { zoom: 1; }
       </tr>
       <tr>
         <td height="27"><div align="center">编译调试（并行，单/双精度）</div></td>
-        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /><br />
+        Fluent2022R2单核并行试用</div></td>
         <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
-        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /><br />
+        Fluent2022R2 单核并行试用</div></td>
         <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
       </tr>
       <tr>
@@ -293,12 +297,25 @@ ul.nav a { zoom: 1; }
     </table>
     <p></p>
     <h1>新闻<span class="header"><a href="#"></a></span></h1>
+    <p>2022年10月:开始支持Visual Studio 2015~2019</p>
     <p>2021年2月: 版本分开为学术版和企业版，企业版具有更多增强功能</p>
     <p>2020年5月: 创建学术版VIP腾讯QQ群（资深高级工程师答疑服务，仅限学术版注册用户可加）</p>
     <p>2018年11月: 创建腾讯QQ群（群号：817525240）。</p>
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <p>2022年7月9日，由于国内无法登录任何bitbucket网站，临时开启主页镜像（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.github.io）</a>。其它稳定官网正在建设中。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2022年10月:  2022R2</p>
+    <blockquote>
+      <ul>
+        <li>支持到Fluent6.3 ~ Fluent 2022R2</li>
+        <li>不是解决方案管理器激活的状态下，重新开VS，就不能自动显示udf_source.cpp文件内容</li>
+        <li>有些高版本matlab或自定义安装目录时认不出的bug</li>
+        <li>增加主页国内可上镜像https://vcudfstudio.github.io，软件中新版本检查的服务器也相应更改</li>
+        <li>Matlab转码设置矩阵的尺寸，即使关闭转码对话框仍然可以记忆矩阵尺寸</li>
+        <li>Matlab转码时动态数组采用标准C语言方法（即数组名加数组尺寸双参数），避免使用emxArray或coder::array之类Matlab自定义类型，造成用户使用困难</li>
+        <li>启动Workbench前真串行提示对话框点Cancel仍然启动Workbench的bug</li>
+      </ul>
+    </blockquote>
     <p>2022年7月:  2022R1 SP5</p>
     <blockquote>
       <ul>

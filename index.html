@@ -167,8 +167,8 @@ ul.nav a { zoom: 1; }
     <p><a href="download_en.html">Downloads</a></p>
     <h1>Supported Platforms<span class="header"><a href="#"></a></span></h1>
     <p><strong>Windows: </strong>WinXP ~ Win11 (32bit &amp; 64bit) Professional or Enterprise</p>
-    <p><strong>Visual Studio:</strong> 2008SP1 ~ 2013 Professional or Ultimate (Chinese or English version)</p>
-    <p><strong>Fluent:</strong> 6.3 ~ 2022R1</p>
+    <p><strong>Visual Studio:</strong> VS2010 ~ VS2019 Community, Professional or Ultimate (Chinese or English version)</p>
+    <p><strong>Fluent:</strong> 6.3 ~ 2022R2</p>
     <p><strong>Intel Visual Fortran</strong>: 2011 ~ 2018 (12.0~18.0)</p>
     <p><strong>Matlab</strong>: 2014a ~ 2021b</p>
     <h1>Features<span class="header"><a href="#"></a></span></h1>
@@ -187,9 +187,11 @@ ul.nav a { zoom: 1; }
       <tr>
         <td width="318"><p align="center">Compile    and debug<br />
           (serial,    single precision)</p></td>
-        <td width="236"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />max. 2 macros</div></td>
+        <td width="236"><div align="center"> <img src="images/right.png" alt="" width="27" height="27" />max. 1 macros,<br />
+        No serial trial for Fluent2022R2</div></td>
         <td width="125"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />unlimited macros</p></td>
-        <td width="224"><div align="center"><img src="images/right.png" alt="" width="27" height="27" />max. 2 macros</div></td>
+        <td width="224"><div align="center"> <img src="images/right.png" alt="" width="27" height="27" />max. 1 macros,<br />
+        No serial trial for Fluent2022R2</div></td>
         <td width="122"><p align="center"><img src="images/right.png" alt="" width="27" height="27" />unlimited macros</p></td>
       </tr>
       <tr>
@@ -203,9 +205,11 @@ ul.nav a { zoom: 1; }
       <tr>
         <td width="318"><p align="center">Compile and debug<br />
           (parallel, single/double    precision)</p></td>
-        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"> <img src="images/error.png" alt="" width="27" height="27" /><br />
+        1-core parallel trial for   Fluent2022R2</div></td>
         <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
-        <td><div align="center"><img src="images/error.png" alt="" width="27" height="27" /></div></td>
+        <td><div align="center"> <img src="images/error.png" alt="" width="27" height="27" /><br />
+        1-core parallel trial for   Fluent2022R2</div></td>
         <td><p align="center"><img src="images/right.png" alt="" width="27" height="27" /></p></td>
       </tr>
       <tr>
@@ -295,12 +299,25 @@ ul.nav a { zoom: 1; }
     </table>
     <p>&nbsp;</p>
     <h1>News<span class="header"><a href="#"></a></span></h1>
+    <p>Oct-2022: Begin to support Visual Studio 2015~2019.</p>
     <p>Feb-2021: This tool was developed as two versions: Academic and Enterprise versions. The later has more enhanced functions.</p>
     <p>May-2020: VIP Tencent QQ group created for academic version (only for registered users of academic version).</p>
     <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
     <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <p>Jul-2022: Temporary mirror homepage was created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.github.io</a>) in case that bitbucket website can't be visited from China. Stable official homepage is in construction.</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Oct-2022: version 2022R2</p>
+    <blockquote>
+      <ul>
+        <li>Support Fluent6.3 ~ Fluent 2022R2.</li>
+        <li>Fixed the bug that &quot;udf_source.cpp&quot; content can't be auto opened if VS restarts after Solution Explorer is deactivated.</li>
+        <li>Fixed the bug that Matlab can't be identified for some higher version or user defined installation folder.</li>
+        <li>Add the homepage mirror https://vcudfstudio.github.io and update check using this mirror.</li>
+        <li>Can remember input parameter types even if &quot;Convert .m files to Cpp&quot; Dialog is closed.</li>
+        <li>Convert dynamic matrix type using C method (i.e., dynamic matrix represented by matrix name and matrix size) so as to avoid using Matlab defined types, like &quot;emxArray&quot; or &quot;coder::array&quot;, which may confuse users.</li>
+        <li>Fixed the bug that workbench will start event if users click &quot;Cancel&quot; in the &quot;True serial warning&quot; dialog.</li>
+      </ul>
+    </blockquote>
     <p>Jul-2022: version 2022R1 SP5</p>
     <blockquote>
       <ul>
