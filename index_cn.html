@@ -304,6 +304,15 @@ ul.nav a { zoom: 1; }
     <p>2018年6月: 创建VC++ Udf Studio主页（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>）。</p>
     <p>2022年7月9日，由于国内无法登录任何bitbucket网站，临时开启主页镜像（<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.github.io）</a>。其它稳定官网正在建设中。</p>
     <h1>历史<span class="header"><a href="#"></a></span></h1>
+    <p>2022年11月:  2022R2 SP1</p>
+    <blockquote>
+      <ul>
+        <li>自动检测是否已经安装MFC组件，如果未发现，则提示用户安装，防止后续在VS中无法建立UDF源码文件。</li>
+        <li>Matlab转为C/C++代码时转换的文件改为.c后缀，防止Matlab所需C++编译器未安装时出现类似&quot;The specified code generation target is configured to generate C++, but the C-only compiler, LCC, is the default compiler... &quot;的错误报告。</li>
+        <li>安装了多个版本Matlab时可能导致C/C++转换失败，给出提示警告。<br />
+        </li>
+      </ul>
+    </blockquote>
     <p>2022年10月:  2022R2</p>
     <blockquote>
       <ul>
