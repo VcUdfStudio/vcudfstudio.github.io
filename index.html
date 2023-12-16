@@ -299,6 +299,7 @@ ul.nav a { zoom: 1; }
     </table>
     <p>&nbsp;</p>
     <h1>News<span class="header"><a href="#"></a></span></h1>
+    <p>Dec-2022: Begin to support dynamic link mode to call Matlab functions.</p>
     <p>Oct-2022: Begin to support Visual Studio 2015~2019.</p>
     <p>Jul-2022: Temporary mirror homepage was created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.github.io</a>) in case that bitbucket website can't be visited from China. Stable official homepage is in construction.</p>
     <p>Feb-2021: This tool was developed as two versions: Academic and Enterprise versions. The later has more enhanced functions.</p>
@@ -306,6 +307,14 @@ ul.nav a { zoom: 1; }
     <p>Nov-2018: Tencent QQ group created (group number: 817525240).</p>
     <p>Jun-2018: VC++ Udf Studio homepage created (<a href="https://vcUdfStudio.bitbucket.io">https://vcUdfStudio.bitbucket.io</a>).</p>
     <h1>History<span class="header"><a href="#"></a></span></h1>
+    <p>Dec-2023: version 2023R2 SP2</p>
+    <blockquote>
+      <ul>
+        <li>Fixed the bug that Intellisense cannot find header files, such as &quot;udf.h&quot; and &quot;Go to Definition&quot; also failed.</li>
+        <li>In &quot;Dynamic link&quot; mode of calling Matlab functions, the dependency of MatlabLibrary.dll on VcRuntime.dll or MSVCR.dll are removed.</li>
+        <li>Fixed the bug that in &quot;Dynamic link&quot; mode of calling Matlab functions, once the MatlabLibraryInitialize function is executed, &quot;Error code: 126&quot; will occur when loading the UDF library again after unloading the UDF library.</li>
+      </ul>
+    </blockquote>
     <p>Dec-2023: version 2023R2 SP1</p>
     <blockquote>
       <ul>
